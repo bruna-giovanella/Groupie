@@ -1,10 +1,11 @@
 package com.groupie.produtos;
 
-public class Musica extends Audio{
+public class Musica extends Audio implements Exibivel{
     private String artista;
     private String album;
     private String genero;
 
+    @Override
     public String fichaTecnica() {
         return String.format("""
                                                       Dados de %s

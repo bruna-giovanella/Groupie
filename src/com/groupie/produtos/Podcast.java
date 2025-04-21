@@ -1,10 +1,11 @@
 package com.groupie.produtos;
 
-public class Podcast extends Audio{
+public class Podcast extends Audio implements Exibivel{
     private String host;
     private String descricao;
     private int quantiaDeEpisodios;
 
+    @Override
     public String fichaTecnica() {
         return String.format("""
                                                       Dados de %s
