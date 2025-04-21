@@ -23,7 +23,6 @@ public class Musica extends Audio{
                                                     getTotalCurtidas(),
                                                     getTotalReproducoes(),
                                                     getAvaliacao());
-
     }
 
     // Getters

@@ -25,20 +25,11 @@ public class Audio {
     public int getAvaliacao() { return avaliacao; }
 
     // Setters
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public void setTotalReproducoes(int totalReproducoes) { this.totalReproducoes = totalReproducoes; }
+    public void setTotalCurtidas(int totalCurtidas) { this.totalCurtidas = totalCurtidas; }
 
-    public void setTotalReproducoes(int totalReproducoes) {
-        this.totalReproducoes = totalReproducoes;
-    }
-
-    public void setTotalCurtidas(int totalCurtidas) {
-        this.totalCurtidas = totalCurtidas;
-    }
-
-    public void setEstaTocando(boolean estaTocando) {
-        this.estaTocando = estaTocando;
+    public void setEstaTocando(boolean estaTocando) { this.estaTocando = estaTocando;
         // Aumenta a quantia de reproduções a cada play
         if (estaTocando) { this.totalReproducoes++; }
     }
