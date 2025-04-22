@@ -39,7 +39,10 @@ public class Main {
         podpah.setTotalReproducoes(2);
         podpah.setEstaTocando(false);
         podpah.descurte();
+        podpah.setDuracaoEmSegundos(1983);
         System.out.println(podpah.fichaTecnica());
+
+
 
 
     }

@@ -12,6 +12,7 @@ public class Podcast extends Audio implements Exibivel{
                                                 Host:               %s
                                                 Descrição:          %s
                                                 Episódios:          %d
+                                                Duração:            %s
 
                                                 Curtidas:           %d
                                                 Reproduções:        %d
@@ -20,6 +21,7 @@ public class Podcast extends Audio implements Exibivel{
                                                     this.host,
                                                     this.descricao,
                                                     this.quantiaDeEpisodios,
+                                                    getDuracao(),
 
                                                     getTotalCurtidas(),
                                                     getTotalReproducoes(),

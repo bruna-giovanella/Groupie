@@ -12,6 +12,7 @@ public class Musica extends Audio implements Exibivel{
                                                 Artista:            %s
                                                 Album:              %s
                                                 Genero:             %s
+                                                Duração:            %s
 
                                                 Curtidas:           %d
                                                 Reproduções:        %d
@@ -20,6 +21,7 @@ public class Musica extends Audio implements Exibivel{
                                                     this.artista,
                                                     this.album,
                                                     this.genero,
+                                                    getDuracao(),
 
                                                     getTotalCurtidas(),
                                                     getTotalReproducoes(),
