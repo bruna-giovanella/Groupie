@@ -1,64 +1,62 @@
-# 🎵 Groupie - Sistema de Mídia em Java
+# Sistema de Gerenciamento de Áudio
 
-Projeto desenvolvido para consolidar os aprendizados do curso **"Java: aplicando a Orientação a Objetos"** da Alura.
+Este projeto foi desenvolvido como parte do curso **"Java: aplicando a Orientação a Objetos"** da plataforma Alura. Seu objetivo é consolidar os conceitos fundamentais de **programação orientada a objetos (POO)** aplicados ao desenvolvimento de uma aplicação em Java.
 
 ---
 
-## 📚 Descrição
+## Descrição
 
-Este projeto simula um sistema de gerenciamento de **mídias de áudio**, como **músicas** e **podcasts**, utilizando os princípios da **programação orientada a objetos** (POO) com Java.
-
-A ideia é treinar conceitos fundamentais como:
+A aplicação simula um sistema de gerenciamento de mídias de áudio, com suporte a diferentes tipos de conteúdo, como **músicas** e **podcasts**. O projeto utiliza princípios essenciais de orientação a objetos, como:
 
 - Herança
 - Encapsulamento
 - Polimorfismo
-- Interfaces
-- Reuso de código
-- Boas práticas de modelagem
+- Abstração via interfaces
+- Reuso e organização de código
 
 ---
 
-## 🧱 Estrutura do Projeto
+## Estrutura do Projeto
 
-O projeto é composto por três principais entidades:
+### Classe `Audio`
 
-### 🔊 `Audio` (Classe base)
-Representa qualquer conteúdo de áudio. Contém atributos e métodos comuns a músicas e podcasts, como:
+Classe base que representa uma mídia genérica de áudio. Contém os atributos e comportamentos comuns entre músicas e podcasts, como:
 
 - `titulo`
 - `avaliacao`
 - `totalCurtidas`
 - `totalReproducoes`
 - `duracaoEmSegundos`
-- Métodos: `curte()`, `descurte()`, `duracaoFormatada()`, etc.
 
----
+Também possui métodos utilitários como:
 
-### 🎵 `Musica` (Herda de `Audio`)
-Adiciona informações específicas de uma música:
+- `curte()`
+- `descurte()`
+- `duracaoFormatada()`
+
+### Classe `Musica` (extends `Audio`)
+
+Especialização da classe `Audio` para representar uma música. Adiciona os seguintes atributos:
 
 - `artista`
 - `album`
 - `genero`
 
-Implementa o método `fichaTecnica()` da interface `Exibivel`, retornando uma ficha formatada com os dados da música.
+Implementa a interface `Exibivel` com o método `fichaTecnica()`, responsável por exibir os detalhes da música de forma formatada.
 
----
+### Classe `Podcast` (extends `Audio`)
 
-### 🎙️ `Podcast` (Herda de `Audio`)
-Adiciona informações específicas de um podcast:
+Especialização da classe `Audio` para representar um podcast. Inclui atributos específicos como:
 
 - `host`
 - `descricao`
 - `quantiaDeEpisodios`
 
-Também implementa `fichaTecnica()` para exibir uma ficha com os dados do podcast.
+Também implementa a interface `Exibivel`, com uma versão própria do método `fichaTecnica()`.
 
----
+### Interface `Exibivel`
 
-### 📄 `Exibivel` (Interface)
-Define o contrato de que qualquer conteúdo exibível deve implementar:
+Define um contrato para classes que devem fornecer uma ficha técnica de apresentação:
 
 ```java
 public interface Exibivel {
